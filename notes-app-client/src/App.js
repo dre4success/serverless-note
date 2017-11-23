@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import './App.css';
 import Routes from './Routes';
+import RouteNavItem from './components/RouteNavItem';
 
 class App extends Component {
 
@@ -14,7 +15,14 @@ class App extends Component {
             <Navbar.Brand>
               <Link to='/'>Scratch</Link>
             </Navbar.Brand>
+            <Navbar.Toggle />
           </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              <RouteNavItem href="/signup">SignUp</RouteNavItem>
+              <RouteNavItem href="/login">Login</RouteNavItem>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
         <Routes />
       </div>
