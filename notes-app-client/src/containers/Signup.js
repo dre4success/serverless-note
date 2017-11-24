@@ -49,8 +49,8 @@ export class Signup extends Component {
       this.setState({ newUser });
     } catch (e) {
       alert(e);
+      this.setState({ isLoading: false });
     }
-    this.setState({ isLoading: false });
   };
 
   handleConfirmationSubmit = async event => {

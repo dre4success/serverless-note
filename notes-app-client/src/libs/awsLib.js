@@ -64,7 +64,7 @@ function getAwsCredentials(userToken) {
       [authenticator]: userToken
     }
   });
-  return AWS.credentials.getPromise();
+  return AWS.config.credentials.getPromise();
 }
 
 export async function invokeApig({
@@ -108,3 +108,4 @@ export async function invokeApig({
   }
   return results.json();
 }
+
