@@ -135,7 +135,7 @@ export class Notes extends Component {
             {this.state.note.attachment && (
               <FormGroup>
                 <ControlLabel>Attachment</ControlLabel>
-                <FormControl.static>
+                <FormControl.Static>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -143,7 +143,7 @@ export class Notes extends Component {
                   >
                     {this.formatFilename(this.state.note.attachment)}
                   </a>
-                </FormControl.static>
+                </FormControl.Static>
               </FormGroup>
             )}
             <FormGroup controlId="file">
