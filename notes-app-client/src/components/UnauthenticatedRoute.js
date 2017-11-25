@@ -7,7 +7,6 @@ function queryString(name, url = window.location.href) {
   const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)', 'i');
   const results = regex.exec(url);
 
-  console.log(results);
   if (!results) {
     return null;
   }
