@@ -5,7 +5,10 @@ import {
   FormControl,
   ControlLabel
 } from 'react-bootstrap';
-import { AuthenticationDetails ,CognitoUserPool } from 'amazon-cognito-identity-js';
+import {
+  AuthenticationDetails,
+  CognitoUserPool
+} from 'amazon-cognito-identity-js';
 import config from '../config';
 import LoaderButton from '../components/LoaderButton';
 import './Signup.css';
@@ -156,7 +159,14 @@ export class Signup extends Component {
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
+          <ControlLabel>
+            Password:{' '}
+            <span className="pass">
+              The password must be 8 or more characters with at least 1
+              uppercase character (A - Z), 1 digit (0 - 9) and 1
+              non-alphanumeric (For example: !, $, #, or %) Unicode character.
+            </span>
+          </ControlLabel>
           <FormControl
             type="password"
             value={this.state.password}
